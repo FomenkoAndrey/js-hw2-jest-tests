@@ -1,7 +1,7 @@
-import { getRandomInt } from './getRandomInt.js'
+import { getRandomInt } from '../getRandomInt.js'
 
 describe('getRandomInt function', () => {
-  it('should return a number within the specified range', () => {
+  test('should return a number within the specified range', () => {
     const testCases = [
       { min: 1, max: 10 },
       { min: 20, max: 30 },

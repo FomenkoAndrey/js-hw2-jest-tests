@@ -1,7 +1,7 @@
-import { sumBigIntegers } from './sumBigIntegers'
+import { sumBigIntegers } from '../sumBigIntegers'
 
 describe('sumBigIntegers function', () => {
-  it('should return the correct sum of two BigIntegers', () => {
+  test('should return the correct sum of two BigIntegers', () => {
     const testCases = [
       {
         numStr1: '33',
