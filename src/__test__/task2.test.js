@@ -1,9 +1,30 @@
-import { greetByName } from '../greetByName'
+import { code } from './prepareTestEnvironment.js'
 
-describe('greet function', () => {
-  test('should return correct greeting', () => {
-    expect(greetByName('Hi', 'John')).toBe('Hi, John')
-    expect(greetByName('Hey', 'Bob')).toBe('Hey, Bob')
-    expect(greetByName('Hello', 'Mary')).toBe('Hello, Mary')
+eval(code)
+
+describe('Task #4: Check for assignment operators', () => {
+  // Перевірка на використання оператора +=
+  test('Check for += operator', () => {
+    expect(code).toMatch(/myTest \+=/)
+  })
+
+  // Перевірка на використання оператора -=
+  test('Check for -= operator', () => {
+    expect(code).toMatch(/myTest -=/)
+  })
+
+  // Перевірка на використання оператора *=
+  test('Check for *= operator', () => {
+    expect(code).toMatch(/myTest \*=/)
+  })
+
+  // Перевірка на використання оператора /=
+  test('Check for /= operator', () => {
+    expect(code).toMatch(/myTest \/=/)
+  })
+
+  // Перевірка на використання оператора %=
+  test('Check for %= operator', () => {
+    expect(code).toMatch(/myTest %=/)
   })
 })

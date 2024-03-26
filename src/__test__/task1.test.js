@@ -1,19 +1,25 @@
-import { getRandomInt } from '../getRandomInt.js'
+import { code } from './prepareTestEnvironment.js'
 
-describe('getRandomInt function', () => {
-  test('should return a number within the specified range', () => {
-    const testCases = [
-      { min: 1, max: 10 },
-      { min: 20, max: 30 },
-      { min: 100, max: 200 },
-      { min: -50, max: 50 },
-      { min: 0, max: 1000 }
-    ]
+eval(code)
 
-    for (const { min, max } of testCases) {
-      const result = getRandomInt(min, max)
-      expect(result).toBeGreaterThanOrEqual(min)
-      expect(result).toBeLessThanOrEqual(max)
-    }
+describe('Task #2: Check for prefix and postfix increments/decrements', () => {
+  // Перевірка на префіксний інкремент
+  test('Check for prefix increment', () => {
+    expect(code).toMatch(/\+\+i/)
+  })
+
+  // Перевірка на постфіксний інкремент
+  test('Check for postfix increment', () => {
+    expect(code).toMatch(/i\+\+/)
+  })
+
+  // Перевірка на префіксний декремент
+  test('Check for prefix decrement', () => {
+    expect(code).toMatch(/--i/)
+  })
+
+  // Перевірка на постфіксний декремент
+  test('Check for postfix decrement', () => {
+    expect(code).toMatch(/i--/)
   })
 })

@@ -1,41 +1,42 @@
-import { sumBigIntegers } from '../sumBigIntegers'
+import { code } from './prepareTestEnvironment.js'
 
-describe('sumBigIntegers function', () => {
-  test('should return the correct sum of two BigIntegers', () => {
-    const testCases = [
-      {
-        numStr1: '33',
-        numStr2: '22',
-        expected: BigInt('55')
-      },
-      {
-        numStr1: '9007199254740991',
-        numStr2: '9007199254740991',
-        expected: BigInt('18014398509481982')
-      },
-      {
-        numStr1: '10000000000000000',
-        numStr2: '10000000000000000', expected: BigInt('20000000000000000')
-      },
-      {
-        numStr1: '999999999999999999',
-        numStr2: '1', expected: BigInt('1000000000000000000')
-      },
-      {
-        numStr1: '123456789012345678901234567890',
-        numStr2: '987654321098765432109876543210',
-        expected: BigInt('1111111110111111111011111111100')
-      },
-      {
-        numStr1: '1234567890123456789012345678901234567890',
-        numStr2: '9876543210987654321098765432098765432100',
-        expected: BigInt('11111111101111111110111111110999999999990')
-      }
-    ]
+eval(code)
 
-    for (const { numStr1, numStr2, expected } of testCases) {
-      const result = sumBigIntegers(numStr1, numStr2)
-      expect(result).toEqual(expected)
-    }
+describe('Task #5: Math object usage', () => {
+  // Перевірка константи Pi
+  test('myPi is defined and equals Math.PI', () => {
+    expect(global.myPi).toBe(Math.PI)
+  })
+  // Перевірка на використання Math.PI
+  test('Code uses Math.PI', () => {
+    expect(code).toMatch(/Math\.PI/)
+  })
+
+  // Перевірка округлення числа 89.279
+  test('myRound is defined and correctly rounds 89.279', () => {
+    expect(global.myRound).toBe(Math.round(89.279))
+  })
+  // Перевірка на використання Math.round
+  test('Code uses Math.round', () => {
+    expect(code).toMatch(/Math\.round\(/)
+  })
+
+  // Перевірка на генерацію випадкового числа
+  test('myRandom is defined and is within the expected range 0 to 10', () => {
+    expect(global.myRandom).toBeGreaterThanOrEqual(0)
+    expect(global.myRandom).toBeLessThanOrEqual(10)
+  })
+  // Перевірка на використання Math.random
+  test('Code uses Math.random', () => {
+    expect(code).toMatch(/Math\.random\(\)/)
+  })
+
+  // Перевірка піднесення числа 3 до степеня 5
+  test('myPow is defined and correctly calculates 3 to the power of 5', () => {
+    expect(global.myPow).toBe(Math.pow(3, 5))
+  })
+  // Перевірка на використання Math.pow
+  test('Code uses Math.pow', () => {
+    expect(code).toMatch(/Math\.pow\(/)
   })
 })
