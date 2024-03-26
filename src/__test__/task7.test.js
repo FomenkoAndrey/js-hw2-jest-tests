@@ -2,7 +2,7 @@ import { code } from './prepareTestEnvironment.js'
 
 eval(code)
 
-describe('Task #9: Transform text case', () => {
+describe('Task #7: Transform text case', () => {
   test('upperStr is correctly transformed to uppercase', () => {
     expect(global.upperStr).toBe('SOME STRING')
   })

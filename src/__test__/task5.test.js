@@ -2,7 +2,7 @@ import { code } from './prepareTestEnvironment.js'
 
 eval(code)
 
-describe('Task #7: Check for the presence of text "рама" in strObj.str', () => {
+describe('Task #5: Check for the presence of text "рама" in strObj.str', () => {
   test('Text "рама" is present in strObj.str', () => {
     // Перевірка, що isRama вірно вказує на наявність тексту "рама"
     expect(global.isRama).toBeTruthy()

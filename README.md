@@ -14,9 +14,13 @@
 
 ## 2. Виконуємо задачі для .js файлів
 
-[getRandomInt.js](src%2FgetRandomInt.js),
-[greetByName.js](src%2FgreetByName.js),
-[sumBigIntegers.js](src%2FsumBigIntegers.js),
+[main.js](src%2Fmain.js)
+
+Додаткові (необов'язкові) задачі:
+
+[getRandomInt.js](src%2FgetRandomInt.js)
+[greetByName.js](src%2FgreetByName.js)
+[sumBigIntegers.js](src%2FsumBigIntegers.js)
 
 ## 3. Запускаємо тести
 

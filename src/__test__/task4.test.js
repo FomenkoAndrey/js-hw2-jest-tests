@@ -2,7 +2,7 @@ import { code } from './prepareTestEnvironment.js'
 
 eval(code)
 
-describe('Task #6: Create and check strObj object', () => {
+describe('Task #4: Create and check strObj object', () => {
   // Перевірка, що об'єкт strObj має правильну структуру та значення
   test('strObj is correctly defined with str and length properties', () => {
     // Перевіряємо, що strObj визначено

@@ -2,7 +2,7 @@ import { code } from './prepareTestEnvironment.js'
 
 eval(code)
 
-describe('Task #5: Math object usage', () => {
+describe('Task #3: Math object usage', () => {
   // Перевірка константи Pi
   test('myPi is defined and equals Math.PI', () => {
     expect(global.myPi).toBe(Math.PI)

@@ -2,7 +2,7 @@ import { code } from './prepareTestEnvironment.js'
 
 eval(code)
 
-describe('Task #2: Check for prefix and postfix increments/decrements', () => {
+describe('Task #1: Check for prefix and postfix increments/decrements', () => {
   // Перевірка на префіксний інкремент
   test('Check for prefix increment', () => {
     expect(code).toMatch(/\+\+i/)
