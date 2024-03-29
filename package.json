@@ -14,6 +14,5 @@
   "scripts": {
     "test": "jest --verbose",
     "watch": "jest --watch --verbose"
-  },
-  "type": "module"
+  }
 }
