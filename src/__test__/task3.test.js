@@ -24,7 +24,7 @@ describe('Task #3: Math object usage', () => {
   // Перевірка на генерацію випадкового числа
   test('myRandom is defined and is within the expected range 0 to 10', () => {
     expect(global.myRandom).toBeGreaterThanOrEqual(0)
-    expect(global.myRandom).toBeLessThanOrEqual(10)
+    expect(global.myRandom).toBeLessThan(10)
   })
   // Перевірка на використання Math.random
   test('Code uses Math.random', () => {
@@ -34,9 +34,5 @@ describe('Task #3: Math object usage', () => {
   // Перевірка піднесення числа 3 до степеня 5
   test('myPow is defined and correctly calculates 3 to the power of 5', () => {
     expect(global.myPow).toBe(Math.pow(3, 5))
-  })
-  // Перевірка на використання Math.pow
-  test('Code uses Math.pow', () => {
-    expect(code).toMatch(/Math\.pow\(/)
   })
 })

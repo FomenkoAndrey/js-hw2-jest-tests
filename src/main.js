@@ -55,10 +55,11 @@ console.log('myPi:', myPi)
 var myRound = Math.round(89.279) // rounded value of 89.279 → myRound
 console.log('myRound:', myRound)
 
-var myRandom = Math.random() * 10 // random number between 0..10 → myRandom
+var myRandom = Math.random() * 10 // random number between 0..10 (excluding 10) → myRandom
 console.log('myRandom:', myRandom)
 
-var myPow = Math.pow(3, 5) // 3 to the 5th power → myPow
+// var myPow = Math.pow(3, 5) // 3 to the 5th power → myPow
+var myPow = 3 ** 5 // 3 to the 5th power → myPow
 console.log('myPow:', myPow)
 
 
