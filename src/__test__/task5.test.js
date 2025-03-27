@@ -1,5 +1,8 @@
 import { code } from './prepareTestEnvironment.js'
 
+// Створюємо глобальний контекст для правильної роботи eval в Vitest
+const global = globalThis;
+
 eval(code)
 
 describe('Task #5: Check for the presence of text "рама" in strObj.str', () => {

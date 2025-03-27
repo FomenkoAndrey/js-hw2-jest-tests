@@ -1,5 +1,8 @@
 import { code } from './prepareTestEnvironment.js'
 
+// Створюємо глобальний контекст для правильної роботи eval в Vitest
+const global = globalThis;
+
 eval(code)
 
 describe('Task #1: Check for prefix and postfix increments/decrements', () => {
